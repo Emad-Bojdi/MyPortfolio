@@ -16,15 +16,18 @@ const MenuItemsData = [{
     url: '/pages',
     submenu: [{
         title: 'PORTFOLIO',
-        url: 'portfolio'
+        url: 'portfolio',
+        key:0,
     },
     {
         title: 'PROJECT DETAILS',
-        url: 'project-details'
+        url: 'project-details',
+        key:1,
     },
     {
         title: 'ELEMENTS',
-        url: 'elements'
+        url: 'elements',
+        key:2,
     }
     ]
 },
@@ -33,11 +36,13 @@ const MenuItemsData = [{
     url: '/blog',
     submenu: [{
         title: 'BLOG',
-        url: 'blog'
+        url: 'blog',
+        key:0,
     },
     {
         title: 'BLOG DETAILS',
-        url: 'blog-details'
+        url: 'blog-details',
+        key:1,
     }
 
     ]

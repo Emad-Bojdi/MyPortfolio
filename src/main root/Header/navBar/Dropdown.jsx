@@ -1,13 +1,14 @@
 import PropTypes from 'prop-types';
 
 
-const Dropdown = ({submenus,isHovered}) => {
+const Dropdown = ({submenus,isHovered,key}) => {
 
   return (
     <>
       <div className="w-full h-auto no-underline pl-2 py-1 text-sm  hover:text-sky-500 font-medium text-black text-left md:text-gray-400 md:relative"
           >
         <ul
+        key={key}
           className={`lg:absolute my-1  bg-slate-50 divide-y shadow-3xl msm:text-black ${
             isHovered
               ? "msm:block msm:w-full msm:h-auto  msm:my-1 msm:shadow-none lg:absolute lg:my-8  lg:bg-slate-50  lg:shadow-3xl lg:msm:text-black"
@@ -19,8 +20,8 @@ const Dropdown = ({submenus,isHovered}) => {
             return (
               <>
                 <li
-                  key={index}
                   className={`w-full h-full py-4 hover:bg-sky-300 focus:text-slate-50 text-sm px-1 focus:bg-sky-300 md:hover:text-slate-50 lg:text-center`}
+                  key={index}
                 >
                   <a key={index} href={submenu.url} className="">
                     {submenu.title}
@@ -39,5 +40,6 @@ export default Dropdown;
 
 Dropdown.propTypes = {
   submenus: PropTypes.array,
-  isHovered: PropTypes.bool
+  isHovered: PropTypes.bool,
+  key: PropTypes.number
 }
