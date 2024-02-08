@@ -23,11 +23,11 @@ const Header = ()=> {
     useEffect(()=>{
         window.addEventListener('resize',handleWindowResize);
         return () => {
-            window.removeEventListener('scroll',handleWindowResize)
+            window.removeEventListener('resize',handleWindowResize)
         }
     },[]);
     return(<>
-        <div className={` h-16 w-full flex shadow-xl ${ isSticky ? ' msm:sticky msm:z-10  msm:shadow-md msm:bg-white' : ''}`} >
+        <div className={` h-16 w-full flex shadow-xl ${ isSticky ? 'fixed top-0 left-0 z-50 shadow-md bg-white' : ''}`} >
           <Logo />
           { windowWidth < 976 ? <Mobilemenu/> : <DekstopMenu/> }
         </div>
